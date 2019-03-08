@@ -1,13 +1,15 @@
-import {
-  createTask,
-  deleteTask,
-  getAllTasks,
-  updateTask,
-} from './pg';
-
-const app = require('express')();
+const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const {
+  createTask,
+  deleteTask,
+  updateTask,
+  getAllTasks,
+} = require('./pg');
+const app = express();
+
+app.use(express.static('./client/build'));
 
 app.use(cors());
 app.use(bodyParser.json());
