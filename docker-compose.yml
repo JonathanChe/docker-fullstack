@@ -1,0 +1,22 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    restart: always
+    volumes:
+      - "./postgres-data:/var/lib/postgresql/data"
+    ports:
+      - 5432:5432
+  server:
+    build: .
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 3000:3000
+    environment:
+      - PGHOST=db
+      - PGUSER=my_username
+      - PGDATABASE=my_username
+      - PGPASSWORD=mysecretpassword
+      - PGPORT=5432

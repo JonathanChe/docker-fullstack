@@ -7,6 +7,7 @@ const {
   updateTask,
   getAllTasks,
 } = require('./pg');
+
 const app = express();
 
 app.use(express.static('./client/build'));

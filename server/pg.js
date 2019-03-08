@@ -1,12 +1,6 @@
 const { Pool } = require('pg');
 
-const pool = new Pool({
-  user: 'postgres',
-  host: 'postgres.localhost',
-  database: 'postgres',
-  password: 'mysecretpassword',
-  port: 5432,
-});
+const pool = new Pool();
 
 const createTableString = `
   CREATE TABLE IF NOT EXISTS tasks(
