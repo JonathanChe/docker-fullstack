@@ -1,0 +1,18 @@
+{
+  "name": "fullstack-todos-docker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jonathan <jonathan.che@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "pg": "^7.8.2"
+  }
+}
